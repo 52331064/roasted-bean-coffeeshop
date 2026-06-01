@@ -20,15 +20,15 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: 'rgba(26, 21, 18, 0.85)', /* Glassmorphism background */
-    backdropFilter: 'blur(10px)', /* Premium blur effect */
+    backgroundColor: 'rgba(26, 21, 18, 0.85)', 
+    backdropFilter: 'blur(10px)', 
     padding: '20px 50px',
     position: 'fixed',
     top: 0,
     left: 0,
     right: 0,
     zIndex: 1000,
-    borderBottom: '1px solid rgba(212, 175, 55, 0.15)', /* Thin gold bottom line */
+    borderBottom: '1px solid rgba(212, 175, 55, 0.15)', 
     fontFamily: "'Montserrat', sans-serif"
   },
   logo: {
@@ -47,6 +47,8 @@ const styles = {
     fontSize: '0.85rem',
     letterSpacing: '2px',
     fontWeight: '400',
-    textTransform: 'uppercase', /* Clean upper layout look */
+    textTransform: 'uppercase',
   }
 };
+
+export default Navbar;
