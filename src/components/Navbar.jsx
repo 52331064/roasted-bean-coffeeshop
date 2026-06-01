@@ -20,32 +20,33 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: '#4a3b32',
-    padding: '15px 30px',
-    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+    backgroundColor: 'rgba(26, 21, 18, 0.85)', /* Glassmorphism background */
+    backdropFilter: 'blur(10px)', /* Premium blur effect */
+    padding: '20px 50px',
     position: 'fixed',
     top: 0,
     left: 0,
     right: 0,
     zIndex: 1000,
-    fontFamily: 'Arial, sans-serif'
+    borderBottom: '1px solid rgba(212, 175, 55, 0.15)', /* Thin gold bottom line */
+    fontFamily: "'Montserrat', sans-serif"
   },
   logo: {
-    color: '#f5e6d3',
-    fontSize: '1.5rem',
-    fontWeight: 'bold',
+    color: '#f5f0eb',
+    fontSize: '1.3rem',
+    fontFamily: "'Playfair Display', serif",
+    letterSpacing: '2px',
   },
   linksContainer: {
     display: 'flex',
-    gap: '20px',
+    gap: '35px',
   },
   link: {
     color: '#dcd1c4',
     textDecoration: 'none',
-    fontSize: '1rem',
-    fontWeight: '500',
-    transition: '0.3s',
+    fontSize: '0.85rem',
+    letterSpacing: '2px',
+    fontWeight: '400',
+    textTransform: 'uppercase', /* Clean upper layout look */
   }
 };
-
-export default Navbar;
