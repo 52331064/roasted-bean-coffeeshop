@@ -1,16 +1,20 @@
-# React + Vite
+# ☕ Roasted Bean Cafés
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A luxury, responsive frontend web application for a boutique coffee roastery, built using ReactJS and hosted live.
 
-Currently, two official plugins are available:
+## ✨ Features
+- **Modern UI/UX:** High-end boutique aesthetic using rich typography (`Playfair Display` & `Montserrat`) and minimalist geometric layout structures.
+- **Multi-page Navigation:** 4 fully functional core routes managed via React Router (`Home`, `About`, `Order`, `Contact`).
+- **Fully Responsive Layout:** Optimized cleanly for fluid browsing on desktop monitors, tablets, and smartphones.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Technologies Used
+- **Frontend Framework:** ReactJS (Vite Build Pipeline)
+- **Routing Engine:** React Router DOM
+- **Version Control:** Git & GitHub
 
-## React Compiler
+## 🚀 Local Setup Instructions
+To run this project locally on your machine, follow these steps:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/52331064/roasted-bean-coffeeshop.git](https://github.com/52331064/roasted-bean-coffeeshop.git)

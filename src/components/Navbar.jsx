@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({ user, onLogout }) {
   return (
     <nav style={styles.navbar}>
       <div style={styles.logo}>☕ Roasted Bean</div>
@@ -10,6 +10,15 @@ function Navbar() {
         <Link to="/about" style={styles.link}>About</Link>
         <Link to="/order" style={styles.link}>Order</Link>
         <Link to="/contact" style={styles.link}>Contact</Link>
+        
+        {user ? (
+          <div style={styles.userSection}>
+            <span style={styles.welcomeText}>Hello, Explorer</span>
+            <button onClick={onLogout} style={styles.logoutBtn}>Logout</button>
+          </div>
+        ) : (
+          <Link to="/login" style={styles.loginLink}>Member Login</Link>
+        )}
       </div>
     </nav>
   );
@@ -20,7 +29,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: 'rgba(26, 21, 18, 0.85)', 
+    backgroundColor: 'rgba(26, 21, 18, 0.9)', 
     backdropFilter: 'blur(10px)', 
     padding: '20px 50px',
     position: 'fixed',
@@ -39,6 +48,7 @@ const styles = {
   },
   linksContainer: {
     display: 'flex',
+    alignItems: 'center',
     gap: '35px',
   },
   link: {
@@ -48,6 +58,35 @@ const styles = {
     letterSpacing: '2px',
     fontWeight: '400',
     textTransform: 'uppercase',
+  },
+  loginLink: {
+    color: '#d4af37',
+    textDecoration: 'none',
+    fontSize: '0.85rem',
+    letterSpacing: '2px',
+    fontWeight: '600',
+    textTransform: 'uppercase',
+    border: '1px solid #d4af37',
+    padding: '8px 16px',
+  },
+  userSection: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '15px'
+  },
+  welcomeText: {
+    color: '#be9b7b',
+    fontSize: '0.85rem',
+    letterSpacing: '1px'
+  },
+  logoutBtn: {
+    backgroundColor: 'transparent',
+    color: '#f5f0eb',
+    border: '1px solid rgba(255,255,255,0.2)',
+    padding: '6px 12px',
+    fontSize: '0.8rem',
+    cursor: 'pointer',
+    letterSpacing: '1px'
   }
 };
 

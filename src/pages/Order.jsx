@@ -1,15 +1,31 @@
 import React from 'react';
 
 function Order() {
+  const items = [
+    { title: "Gold Label Espresso", price: "$6.00", desc: "Sourced from single-origin Ethiopian micro-lots with bright citrus accents." },
+    { title: "Silk Cream Cappuccino", price: "$7.50", desc: "Double shot extraction paired with micro-foamed velvety macadamia milk." },
+    { title: "Kyoto Cold Drip", price: "$8.00", desc: "Slow-extracted over ice for 18 hours, presenting deep wine-like chocolate complex profiles." }
+  ];
+
   return (
     <div style={styles.container}>
       <div style={styles.card}>
-        <h2 style={styles.title}>Place Your Order</h2>
-        <p style={styles.text}>Select your favorite brew and pick it up hot!</p>
-        <div style={styles.menuItem}>☕ Espresso — $3.50</div>
-        <div style={styles.menuItem}>🥛 Latte — $4.50</div>
-        <div style={styles.menuItem}>🧊 Cold Brew — $4.00</div>
-        <button style={styles.button}>Confirm Order</button>
+        <span style={styles.tagline}>THE COLLECTION</span>
+        <h2 style={styles.title}>Curate Your Brew</h2>
+        
+        <div style={styles.menuBox}>
+          {items.map((item, index) => (
+            <div key={index} style={styles.itemBlock}>
+              <div style={styles.mainRow}>
+                <span style={styles.itemTitle}>{item.title}</span> 
+                <span style={styles.gold}>{item.price}</span>
+              </div>
+              <p style={styles.itemDesc}>{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <button style={styles.button}>RESERVE SELECTION</button>
       </div>
     </div>
   );
@@ -17,28 +33,30 @@ function Order() {
 
 const styles = {
   container: {
-    fontFamily: 'Arial, sans-serif',
-    backgroundColor: '#fdfaf6',
-    minHeight: '100vh',
+    minHeight: '80vh',
+    backgroundColor: '#1a1512',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '20px',
+    padding: '40px 20px',
   },
   card: {
     textAlign: 'center',
-    backgroundColor: '#4a3b32',
-    padding: '40px',
-    borderRadius: '12px',
-    color: '#fff',
-    maxWidth: '500px',
+    border: '1px solid rgba(212, 175, 55, 0.2)',
+    padding: '50px 40px',
+    maxWidth: '650px',
     width: '100%',
-    boxShadow: '0px 8px 16px rgba(0,0,0,0.1)',
+    backgroundColor: '#231c18',
   },
-  title: { fontSize: '2.2rem', marginBottom: '15px', color: '#f5e6d3' },
-  text: { fontSize: '1.1rem', marginBottom: '20px', color: '#dcd1c4' },
-  menuItem: { backgroundColor: '#5c4a3e', padding: '10px', borderRadius: '6px', margin: '10px 0' },
-  button: { backgroundColor: '#be9b7b', color: '#fff', border: 'none', padding: '12px 30px', fontSize: '1rem', borderRadius: '25px', cursor: 'pointer', fontWeight: 'bold', marginTop: '15px' }
+  tagline: { fontSize: '0.75rem', letterSpacing: '4px', color: '#be9b7b', display: 'block', marginBottom: '10px' },
+  title: { fontFamily: "'Playfair Display', serif", fontSize: '2.8rem', color: '#f5f0eb', fontWeight: '400', marginBottom: '30px' },
+  menuBox: { textAlign: 'left', marginBottom: '35px' },
+  itemBlock: { padding: '20px 0', borderBottom: '1px solid rgba(255,255,255,0.05)' },
+  mainRow: { display: 'flex', justifyContent: 'space-between', marginBottom: '6px' },
+  itemTitle: { color: '#f5f0eb', fontSize: '1.1rem', letterSpacing: '1px' },
+  itemDesc: { color: '#be9b7b', fontSize: '0.85rem', lineHeight: '1.5', fontWeight: '300' },
+  gold: { color: '#d4af37', fontWeight: '600', fontSize: '1.1rem' },
+  button: { backgroundColor: 'transparent', color: '#d4af37', border: '1px solid #d4af37', padding: '15px 40px', fontSize: '0.85rem', letterSpacing: '2px', cursor: 'pointer', width: '100%', fontWeight: '600' }
 };
 
 export default Order;
