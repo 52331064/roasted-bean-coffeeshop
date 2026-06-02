@@ -4,11 +4,12 @@ function Contact() {
   return (
     <div style={styles.container}>
       <div style={styles.card}>
-        <h2 style={styles.title}>Contact Us</h2>
-        <p style={styles.text}>We'd love to hear from you! Drop by or reach out online.</p>
-        <p style={styles.info}>📍 123 Coffee Lane, Brew City</p>
-        <p style={styles.info}>📞 +123 456 789</p>
-        <p style={styles.info}>✉️ support@roastedbean.com</p>
+        <span style={styles.tagline}>RESERVATIONS & INQUIRIES</span>
+        <h2 style={styles.title}>Connect With Us</h2>
+        <p style={styles.text}>Experience luxury brewing firsthand at our boutique roastery.</p>
+        <div style={styles.info}>📍 123 Atelier Boulevard, Suite Luxury</div>
+        <div style={styles.info}>📞 +1 (800) 555-BEAN</div>
+        <div style={styles.info}>✉️ concierge@roastedbean.com</div>
       </div>
     </div>
   );
@@ -16,27 +17,24 @@ function Contact() {
 
 const styles = {
   container: {
-    fontFamily: 'Arial, sans-serif',
-    backgroundColor: '#fdfaf6',
-    minHeight: '100vh',
+    minHeight: '80vh',
+    backgroundColor: '#1a1512',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '20px',
+    padding: '40px 20px',
   },
   card: {
     textAlign: 'center',
-    backgroundColor: '#4a3b32',
-    padding: '40px',
-    borderRadius: '12px',
-    color: '#fff',
-    maxWidth: '500px',
-    width: '100%',
-    boxShadow: '0px 8px 16px rgba(0,0,0,0.1)',
+    border: '1px solid rgba(212, 175, 55, 0.2)',
+    padding: '50px 40px',
+    maxWidth: '600px',
+    backgroundColor: '#231c18',
   },
-  title: { fontSize: '2.2rem', marginBottom: '15px', color: '#f5e6d3' },
-  text: { fontSize: '1.1rem', marginBottom: '20px', color: '#dcd1c4' },
-  info: { fontSize: '1rem', margin: '10px 0', color: '#fff' }
+  tagline: { fontSize: '0.75rem', letterSpacing: '4px', color: '#be9b7b', display: 'block', marginBottom: '10px' },
+  title: { fontFamily: "'Playfair Display', serif", fontSize: '2.8rem', color: '#f5f0eb', fontWeight: '400', marginBottom: '25px' },
+  text: { fontSize: '1rem', color: '#dcd1c4', marginBottom: '30px', fontWeight: '300' },
+  info: { fontSize: '0.95rem', margin: '12px 0', color: '#f5f0eb', letterSpacing: '1px' }
 };
 
 export default Contact;

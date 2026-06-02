@@ -4,9 +4,10 @@ function About() {
   return (
     <div style={styles.container}>
       <div style={styles.card}>
-        <h2 style={styles.title}>Our Story</h2>
+        <span style={styles.tagline}>OUR HERITAGE</span>
+        <h2 style={styles.title}>The Craft</h2>
         <p style={styles.text}>
-          Founded with a passion for exceptional beans, Roasted Bean Café brings premium, sustainably sourced coffee to your cup. Every batch is roasted to perfection to ensure a rich, aromatic experience.
+          Every single bean is chosen from elite micro-lots and roasted with architectural precision to balance complex flavor profiles. We live for the art of coffee.
         </p>
       </div>
     </div>
@@ -15,26 +16,23 @@ function About() {
 
 const styles = {
   container: {
-    fontFamily: 'Arial, sans-serif',
-    backgroundColor: '#fdfaf6',
-    minHeight: '100vh',
+    minHeight: '80vh',
+    backgroundColor: '#1a1512',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '20px',
+    padding: '40px 20px',
   },
   card: {
     textAlign: 'center',
-    backgroundColor: '#4a3b32',
-    padding: '40px',
-    borderRadius: '12px',
-    color: '#fff',
-    maxWidth: '500px',
-    width: '100%',
-    boxShadow: '0px 8px 16px rgba(0,0,0,0.1)',
+    border: '1px solid rgba(212, 175, 55, 0.2)',
+    padding: '50px 40px',
+    maxWidth: '600px',
+    backgroundColor: '#231c18',
   },
-  title: { fontSize: '2.2rem', marginBottom: '15px', color: '#f5e6d3' },
-  text: { fontSize: '1.1rem', lineHeight: '1.6', color: '#dcd1c4' }
+  tagline: { fontSize: '0.75rem', letterSpacing: '4px', color: '#be9b7b', display: 'block', marginBottom: '10px' },
+  title: { fontFamily: "'Playfair Display', serif", fontSize: '2.8rem', color: '#f5f0eb', fontWeight: '400', marginBottom: '20px' },
+  text: { fontSize: '1rem', lineHeight: '1.8', color: '#dcd1c4', fontWeight: '300' }
 };
 
 export default About;

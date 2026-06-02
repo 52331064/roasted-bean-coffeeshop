@@ -10,7 +10,7 @@ function Login({ onLogin }) {
     e.preventDefault();
     if (email && password) {
       onLogin(email);
-      navigate('/'); // Go back to home page after success
+      navigate('/'); // Redirect back home on successful logic entry
     } else {
       alert('Please enter your boutique member credentials.');
     }

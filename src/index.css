@@ -10,12 +10,12 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background-color: #1a1512; /* Deep luxury dark brown/black background */
+  background-color: #1a1512; /* Premium moody dark layout background */
   color: #f5f0eb;
   overflow-x: hidden;
 }
 
-/* Smooth transition for luxurious hover animations */
+/* Smooth fluid transitions for buttons and links */
 a, button {
   transition: all 0.4s ease-in-out;
 }

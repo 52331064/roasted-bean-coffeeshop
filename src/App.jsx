@@ -9,21 +9,21 @@ import Order from "./pages/Order";
 import Login from "./pages/Login";
 
 function App() {
-  // Global state to track if a user is logged in
+  // Global state to track logged-in users
   const [user, setUser] = useState(null);
 
   return (
     <BrowserRouter>
-      {/* Pass user state and logout handler down to the navbar */}
+      {/* Navbar receives login state and logout function */}
       <Navbar user={user} onLogout={() => setUser(null)} />
       
+      {/* Top padding keeps fixed navbar from covering text */}
       <div style={{ paddingTop: "100px" }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/order" element={<Order />} />
           <Route path="/contact" element={<Contact />} />
-          {/* Pass the login login function down to the Login page */}
           <Route path="/login" element={<Login onLogin={(email) => setUser(email)} />} />
         </Routes>
       </div>
